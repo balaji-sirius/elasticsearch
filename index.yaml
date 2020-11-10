@@ -3,11 +3,18 @@ entries:
   elasticsearch:
   - apiVersion: v1
     appVersion: 8.0.0-SNAPSHOT
-    created: "2020-11-10T16:57:44.906987+05:30"
+    created: "2020-11-10T18:32:58.469616+05:30"
     description: Official Elastic helm chart for Elasticsearch
-    digest: 09ff912c12b4cde136011a26654a39414c06828b63d5765e42bec7e923b69ecf
+    digest: 7708439caae608cc77bfa7dfe55ace93435504926ebcc0b0956c9eacd66c1eee
+    home: https://github.com/elastic/helm-charts
+    icon: https://helm.elastic.co/icons/elasticsearch.png
+    maintainers:
+    - email: helm-charts@elastic.co
+      name: Elastic
     name: elasticsearch
+    sources:
+    - https://github.com/elastic/elasticsearch
     urls:
-    - elasticsearch-8.0.0-SNAPSHOT.tgz
+    - https://github.com/balaji-sirius/elasticsearch/elasticsearch-8.0.0-SNAPSHOT.tgz
     version: 8.0.0-SNAPSHOT
-generated: "2020-11-10T16:57:44.90242+05:30"
+generated: "2020-11-10T18:32:58.465697+05:30"
