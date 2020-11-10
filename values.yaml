@@ -101,23 +101,23 @@ rbac:
   serviceAccountAnnotations: {}
   serviceAccountName: ""
 
-podSecurityPolicy:
-  create: false
-  name: ""
-  spec:
-    privileged: true
-    fsGroup:
-      rule: RunAsAny
-    runAsUser:
-      rule: RunAsAny
-    seLinux:
-      rule: RunAsAny
-    supplementalGroups:
-      rule: RunAsAny
-    volumes:
-      - secret
-      - configMap
-      - persistentVolumeClaim
+# podSecurityPolicy:
+#   create: false
+#   name: ""
+#   spec:
+#     privileged: true
+#     fsGroup:
+#       rule: RunAsAny
+#     runAsUser:
+#       rule: RunAsAny
+#     seLinux:
+#       rule: RunAsAny
+#     supplementalGroups:
+#       rule: RunAsAny
+#     volumes:
+#       - secret
+#       - configMap
+#       - persistentVolumeClaim
 
 persistence:
   enabled: true
@@ -194,8 +194,8 @@ updateStrategy: RollingUpdate
 maxUnavailable: 1
 
 podSecurityContext:
-  fsGroup: 1000
-  runAsUser: 1000
+  fsGroup: null
+  runAsUser: null
 
 securityContext:
   capabilities:
@@ -203,7 +203,7 @@ securityContext:
     - ALL
   # readOnlyRootFilesystem: true
   runAsNonRoot: true
-  runAsUser: 1000
+  runAsUser: null
 
 # How long to wait for elasticsearch to stop gracefully
 terminationGracePeriod: 120
@@ -271,7 +271,7 @@ lifecycle: {}
   #         curl -XPUT "$ES_URL/_template/$TEMPLATE_NAME" -H 'Content-Type: application/json' -d'{"index_patterns":['\""$INDEX_PATTERN"\"'],"settings":{"number_of_shards":'$SHARD_COUNT',"number_of_replicas":'$REPLICA_COUNT'}}'
 
 sysctlInitContainer:
-  enabled: true
+  enabled: false
 
 keystore: []
 
